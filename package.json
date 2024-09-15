@@ -1,0 +1,28 @@
+{
+  "name": "postaway",
+  "version": "1.0.0",
+  "description": "social media postaway project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/priyaapreeti/crud-postaway.git"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "preeti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/priyaapreeti/crud-postaway/issues"
+  },
+  "homepage": "https://github.com/priyaapreeti/crud-postaway#readme",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
