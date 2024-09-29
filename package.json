@@ -23,6 +23,8 @@
   "homepage": "https://github.com/priyaapreeti/crud-postaway#readme",
   "type": "module",
   "dependencies": {
-    "express": "^4.21.0"
+    "body-parser": "^1.20.3",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2"
   }
 }
