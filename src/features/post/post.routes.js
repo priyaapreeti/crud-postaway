@@ -7,7 +7,7 @@ const postRoutes=express.Router();
 
 postRoutes.get("/",postController.getAllPosts);
 postRoutes.post("/add",postController.addAPost);
-postRoutes.get("/:userid",postController.getPostsByUser);
+postRoutes.get("/user/:userid",postController.getPostsByUser); // not the best APi
 postRoutes.get("/:postid",postController.getThisPost);
 postRoutes.put("/:postid",postController.updatePost);
 postRoutes.delete("/:postid",postController.deleteThisPost);

@@ -23,11 +23,35 @@ export default class postModel {
     console.log(thePosts);
     return thePosts;
   }
-  static getThisPost() {}
-  static updatePost() {}
-  static deleteThisPost() {}
+  static getThisPost(postid) {
+    const thePost = posts.filter((post) => post.postid === parseInt(postid));
+    console.log(thePost);
+    return thePost;
+  }
+  static updatePost(postid, postContent) {
+    const thePostIdx = posts.findIndex(
+      (post) => post.postid === parseInt(postid)
+    );
+    console.log(thePostIdx);
+    if (thePostIdx !== -1) {
+      //update it
+      posts[thePostIdx] = { ...posts[thePostIdx], ...postContent };
+      return posts[thePostIdx];
+    } else return "no post";
+  }
+  static deleteThisPost(postid) {
+    const thePostIdx = posts.findIndex(
+      (post) => post.postid === parseInt(postid)
+    );
+    console.log(thePostIdx);
+    if (thePostIdx !== -1)
+      return posts.filter((post) => post.postid === parseInt(postid));
+    else return "no post with this id to delete";
+  }
 }
 const posts = [
   new postModel(1, 1, "blablabla", 2),
   new postModel(2, 1, "another post", 4),
+  new postModel(3, 3, "content", 2),
+  new postModel(4, 4, "ek aur", 0),
 ];
